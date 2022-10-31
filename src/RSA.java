@@ -37,6 +37,13 @@ public class RSA {
         }
     }
 
+    public static BigInteger encrypt(BigInteger x, BigInteger e, BigInteger n){
+        return x.modPow(e,n);
+    }
+    public static BigInteger decrypt(BigInteger y, BigInteger d, BigInteger n){
+        return y.modPow(d,n);
+    }
+
     public static KeyPair[] generateKeyPair(int _p, int _q) {
         BigInteger p = BigInteger.valueOf(_p);
         BigInteger q = BigInteger.valueOf(_q);
@@ -63,15 +70,13 @@ public class RSA {
         }
         throw new ArithmeticException("No possible values for e were found.");
     }
-    //
 
     private static boolean areRelativelyPrime(BigInteger a, BigInteger b) {
-        BigInteger t;
-        while (b.equals(BigInteger.ZERO)) {
-            t = new BigInteger(a.toString());
-            a = new BigInteger(b.toString());
-            b = t.mod(b);
-        }
-        return a.equals(BigInteger.ONE);
+        return gcd(a,b).equals(BigInteger.ONE);
+    }
+
+    public static BigInteger gcd(BigInteger a, BigInteger b) {
+        if (b.equals(BigInteger.ZERO)) return a;
+        return gcd(b,a.mod(b));
     }
 }

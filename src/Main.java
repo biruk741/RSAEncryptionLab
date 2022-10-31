@@ -1,9 +1,9 @@
+import java.math.BigInteger;
 import java.util.Scanner;
 
 public class Main {
 
     static Scanner scanner = new Scanner(System.in);
-    static Scanner scanner2 = new Scanner(System.in);
     public static void main(String[] args) {
         System.out.println("----------- RSA Encryption Lab -----------");
         mainPrompt();
@@ -21,31 +21,24 @@ public class Main {
     }
 
     private static void encryptPrompt() {
-        System.out.println("1. ECB\n2. CTR\n3. CBC\n4. CFB\n5. OFB\n6. Run all modes");
-        int choice = scanner.nextInt();
-        System.out.println("Please enter the plaintext:");
-//        switch (choice) {
-//            case 1 -> ECB(scanner2.nextLine());
-//            case 2 -> CTR(scanner2.nextLine());
-//            case 3 -> CBC(scanner2.nextLine());
-//            case 4 -> CFB(scanner2.nextLine());
-//            case 5 -> OFB(scanner2.nextLine());
-//            case 6 -> runAll(scanner2.nextLine());
-//        }
+        System.out.println("Enter a number to encrypt: ");
+        BigInteger x = BigInteger.valueOf(scanner.nextInt());
+        System.out.println("Enter the public exponent: ");
+        BigInteger e = BigInteger.valueOf(scanner.nextInt());
+        System.out.println("Enter n: ");
+        BigInteger n = BigInteger.valueOf(scanner.nextInt());
+        System.out.println("The result is: " + RSA.encrypt(x,e,n));
         mainPrompt();
     }
 
     private static void decryptPrompt() {
-        System.out.println("1. ECB\n2. CTR\n3. CBC\n4. CFB\n5. OFB\n");
-        int choice = scanner.nextInt();
-        System.out.println("Please enter the ciphertext:");
-//        switch (choice) {
-//            case 1 -> ECBDecrypt(scanner2.nextLine());
-//            case 2 -> CTRDecrypt(scanner2.nextLine());
-//            case 3 -> CBCDecrypt(scanner2.nextLine());
-//            case 4 -> CFBDecrypt(scanner2.nextLine());
-//            case 5 -> OFBDecrypt(scanner2.nextLine());
-//        }
+        System.out.println("Enter a number to decrypt: ");
+        BigInteger y = BigInteger.valueOf(scanner.nextInt());
+        System.out.println("Enter the private exponent: ");
+        BigInteger d = BigInteger.valueOf(scanner.nextInt());
+        System.out.println("Enter n: ");
+        BigInteger n = BigInteger.valueOf(scanner.nextInt());
+        System.out.println("The result is: " + RSA.decrypt(y,d,n));
         mainPrompt();
     }
 
