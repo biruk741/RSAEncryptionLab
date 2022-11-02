@@ -1,4 +1,5 @@
 import java.math.BigInteger;
+import java.util.ArrayList;
 
 public class RSA {
 
@@ -44,10 +45,8 @@ public class RSA {
         return y.modPow(d,n);
     }
 
-    public static KeyPair[] generateKeyPair(int _p, int _q) {
-        BigInteger p = BigInteger.valueOf(_p);
-        BigInteger q = BigInteger.valueOf(_q);
-
+    public static KeyPair[] generateKeyPair(BigInteger p, BigInteger q) {
+        // Changed generateKeyPair to take two BigIntergers p, q.
         BigInteger n = p.multiply(q);
 
         BigInteger phi = p.subtract(BigInteger.ONE).multiply(q.subtract(BigInteger.ONE));

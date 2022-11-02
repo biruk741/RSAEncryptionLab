@@ -21,16 +21,16 @@ e = 11
 Biruk and Zeke:
 p = 756,065,159, q = 879,190,841
 n = 664725562992008719
-phi(n) = (13-1)(17-1) = (12)(16) = 192 \todo: change these numbers to reflect 9-digit p and q
+phi(n) = (756,065,159-1)(879,190,841-1) = (756,065,158)(879,190,840) = 664725561356752720
 e = 3
 d = 443150374237835147
 
-We are encrypting the number 71 with their public key.
-The result of encryption is: 71
+We are encrypting the number 574,935,342 with their public key.
+The result of encryption is: 89,497,323,804,483,257
 
-Conor and Nick encrypted a number with our public key, the result was 220.
-The result of decryption is: 220
+Conor and Nick encrypted a number with our public key, the result was 552,626,934,992,905,583.
+The result of decryption is: 102,734,180,247,043
 
 Conor and Nick:
-n = 77
-e = 11
+n = 250,115,592,009,817,691
+e = 5
