@@ -1,0 +1,36 @@
+------------------  Task 2  --------------------
+Biruk and Zeke:
+p = 13, q = 17
+n = 221
+phi(n) = (13-1)(17-1) = (12)(16) = 192
+e = 5 --> using our findE() method
+d = 77
+
+We are encrypting the number 71 with their public key.
+The result of encryption is: 71
+
+Conor and Nick encrypted a number with our public key, the result was 220.
+The result of decryption is: 220
+
+Conor and Nick:
+n = 77
+e = 11
+
+
+------------------  Task 3  --------------------
+Biruk and Zeke:
+p = 756,065,159, q = 879,190,841
+n = 664725562992008719
+phi(n) = (756,065,159-1)(879,190,841-1) = (756,065,158)(879,190,840) = 664725561356752720
+e = 3
+d = 443150374237835147
+
+We are encrypting the number 574,935,342 with their public key.
+The result of encryption is:
+
+Conor and Nick encrypted a number with our public key, the result was .
+The result of decryption is:
+
+Conor and Nick:
+n = 250,115,592,009,817,691
+e = 5
